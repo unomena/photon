@@ -29,7 +29,7 @@ class Client(object):
         headers = {
             'Content-Type': 'application/octet-stream',
         }
-        url = urlparse.urljoin(self.server, '/api/store/')
+        url = urlparse.urljoin(self.server, '/holodeck/api/store/')
         req = urllib2.Request(url, headers=headers)
         response = urllib2.urlopen(req, data).read()
         return response
